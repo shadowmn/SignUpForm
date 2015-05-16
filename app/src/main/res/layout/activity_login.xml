@@ -1,0 +1,88 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".LoginActivity">
+
+    <LinearLayout
+        android:id="@+id/username_field"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/username_label"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/username_text"
+            android:textSize="16dp"
+            android:layout_weight="25"/>
+
+        <EditText
+            android:id="@+id/username_input"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/username_label"
+            android:hint="@string/username_prompt"
+            android:textSize="16sp"
+            android:layout_weight="75"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/password_field"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/username_field">
+
+        <TextView
+            android:id="@+id/password_label"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/password_text"
+            android:textSize="16dp"
+            android:layout_weight="25"/>
+
+        <EditText
+            android:id="@+id/password_input"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/username"
+            android:hint="@string/password_prompt"
+            android:textSize="16sp"
+            android:layout_weight="75"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/pw_confirm_field"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/password_field">
+
+        <TextView
+            android:id="@+id/pw_confirm_label"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/pw_confirm_text"
+            android:textSize="16dp"
+            android:layout_weight="25"/>
+
+        <EditText
+            android:id="@+id/pw_confirm_input"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/username"
+            android:hint="@string/pw_confirm_prompt"
+            android:textSize="16sp"
+            android:layout_weight="75"/>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/submit_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/pw_confirm_field"
+        android:layout_below="@+id/pw_confirm_field"
+        android:text="@string/submit"
+        android:textSize="18sp" />
+
+</RelativeLayout>
